@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Registration } from './models';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'day31';
+  aName = 'fred';
+  names=['fred','wilma','betty','barney']
+
+  betty: Registration = {
+    name:'betty',
+    email:'betty@gmail.com',
+    gender:'f',
+    newsletter: true
+  }
+
+  newRegistration(reg: Registration){
+    console.info(">>>>> new registration: " ,reg);
+  }
 }
